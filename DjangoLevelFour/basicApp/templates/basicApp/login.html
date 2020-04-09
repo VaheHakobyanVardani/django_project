@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "basicApp/base.html" %}
+  {% block body_block %}
+    <div class="container">
+      <div class="jumbotron">
+        <h1>WELCOME TO LOGIN PAGE</h1>
+        <form method="post" action="{% url 'basicApp:User_login' %}">
+          {% csrf_token %}
+          <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" class="form-control" placeholder="Ener Username">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control">
+      </div>
+      <input type="submit" name="" value="Login">
+     </form>
+
+
+    </form>
+
+      </div>
+    </div>
+    {% endblock %}
